@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Function Example</title>
+    <script>
+      function showMessage(message, callback) {
+        alert(message); // Show an alert with the message
+        if (callback) {
+          callback(); // Execute the callback function
+        }
+      }
+
+      function handleClick() {
+        console.log("Button was clicked!"); // Log when the button is clicked
+        showMessage("Button Clicked!", function () {
+          console.log("Callback executed after alert."); // Log for callback execution
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Callback Function Example</h1>
+    <button id="myButton" onclick="handleClick()">Click Me!</button>
+  </body>
+</html>

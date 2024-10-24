@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Page</title>
+  </head>
+  <body>
+    <h1 id="title">Hello, World!</h1>
+    <button id="clickButton">Click Me</button>
+    <script>
+      document
+        .getElementById("clickButton")
+        .addEventListener("click", function () {
+          document.getElementById("title").textContent = "Button Clicked!";
+        });
+
+      <div
+        id="dropzone"
+        style="width: 300px; height: 200px; border: 2px dashed #ccc;"
+      >
+        Drop files here
+      </div>;
+    </script>
+  </body>
+</html>

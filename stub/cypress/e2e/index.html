@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Data</title>
+  </head>
+  <body>
+    <button id="fetch-data">Fetch User Data</button>
+    <div id="user-name"></div>
+
+    <script>
+      const user = {
+        fetchData: () => {
+          // This would normally fetch data from an API
+          name: "John Doe";
+        },
+      };
+
+      document.getElementById("fetch-data").onclick = function () {
+        const data = user.fetchData();
+        document.getElementById("user-name").innerText = data.name;
+      };
+    </script>
+  </body>
+</html>

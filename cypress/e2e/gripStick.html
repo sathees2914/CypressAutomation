@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grip Stick Example</title>
+    <style>
+      #element {
+        width: 200px;
+        height: 200px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="element"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const element = document.getElementById("element");
+
+        element.addEventListener("mousedown", (event) => {
+          console.log("Mouse down");
+        });
+
+        element.addEventListener("mousemove", (event) => {
+          console.log("Mouse move");
+        });
+
+        element.addEventListener("mouseup", (event) => {
+          console.log("Mouse up");
+        });
+      });
+    </script>
+  </body>
+</html>

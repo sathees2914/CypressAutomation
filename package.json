@@ -1,0 +1,48 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "headedrun": "npx cypress open",
+    "chromeBrowserRum": "npx cypress run --browser chrome",
+    "protoSped": "npx cypress run --browser chrome --spec 'cypress/e2e/spec.cy.js''",
+    "cloudRecord": "npx cypress run --record --key f8d3df25-01ec-462e-8174-df0f62c4785c"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "cypress": "^13.15.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-grep": "^3.0.4",
+    "cypress-iframe": "^1.0.1",
+    "cypress-image-snapshot": "^4.0.1",
+    "deep-equal": "^2.2.3",
+    "fs-extra": "^11.2.0",
+    "html-minifier": "^4.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "pg": "^8.12.0",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "ajv": "^8.16.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "iframe": "^1.0.0",
+    "jsdom": "^24.1.0",
+    "xml2js": "^0.6.2"
+  },
+  "reporter": "cypress-html-reporter",
+  "reporterOptions": {
+    "jsonFolder": "cypress/results",
+    "reportFolder": "cypress/reports",
+    "overwrite": false,
+    "htmlReportTemplate": "./custom-report-template.hbs"
+  }
+}

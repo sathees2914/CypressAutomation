@@ -1,0 +1,86 @@
+Navigation
+cy.visit(url): Visits a web page.
+Example: cy.visit('https://example.com')
+This command navigates to the specified URL and waits for the page to load.
+
+cy.go(direction): Goes back, forward, or reloads the page.
+Example: cy.go('back'), cy.go('forward'), cy.go('reload')
+This command navigates to the previous page, next page, or reloads the current page.
+
+cy.reload(): Reloads the page.
+Example: cy.reload()
+This command reloads the current page.
+
+Querying
+cy.get(selector): Retrieves one or more DOM elements.
+Example: cy.get('#myElement'), cy.get('.myClass'), cy.get('input[name="username"]')
+This command retrieves one or more DOM elements that match the specified selector.
+
+cy.contains(text): Retrieves a DOM element containing the specified text.
+Example: cy.contains('Hello, World!')
+This command retrieves a DOM element that contains the specified text.
+Actions
+
+cy.click(): Clicks a DOM element.
+Example: cy.get('#myButton').click()
+This command clicks the specified DOM element.
+
+cy.type(text): Types text into a DOM element.
+Example: cy.get('#myInput').type('Hello, World!')
+This command types the specified text into the DOM element.
+
+cy.clear(): Clears the value of a DOM element.
+Example: cy.get('#myInput').clear()
+This command clears the value of the DOM element.
+
+cy.check(): Checks a checkbox or radio button.
+Example: cy.get('#myCheckbox').check()
+This command checks the specified checkbox or radio button.
+
+cy.uncheck(): Unchecks a checkbox or radio button.
+Example: cy.get('#myCheckbox').uncheck()
+This command unchecks the specified checkbox or radio button.
+
+cy.select(value): Selects an option from a dropdown.
+Example: cy.get('#mySelect').select('option1')
+This command selects the specified option from the dropdown.
+
+Assertions
+cy.should(command): Makes an assertion about a DOM element.
+Example: cy.get('#myElement').should('be.visible')
+This command makes an assertion about the DOM element, such as its visibility, text content, or attribute value.
+
+cy.and(command): Chains multiple assertions together.
+Example: cy.get('#myElement').should('be.visible').and('have.text', 'Hello, World!')
+This command chains multiple assertions together to make a more complex assertion.
+Waiting
+
+cy.wait(time): Waits for a specified amount of time.
+Example: cy.wait(1000) (waits for 1 second)
+This command waits for the specified amount of time before continuing with the test.
+
+cy.wait(alias): Waits for a command to finish.
+Example: cy.wait('@myAlias')
+This command waits for the command with the specified alias to finish before continuing with the test.
+
+Aliases
+cy.as(alias): Creates an alias for a DOM element.
+Example: cy.get('#myElement').as('myAlias')
+This command creates an alias for the DOM element, which can be used to reference it later in the test.
+
+cy.get(alias): Retrieves a DOM element by its alias.
+Example: cy.get('@myAlias')
+This command retrieves the DOM element with the specified alias.
+
+Utilities
+cy.exec(command): Executes a system command.
+Example: cy.exec('ls -l') (executes the ls -l command)
+This command executes a system command and returns the output.
+
+cy.readFile(filePath): Reads the contents of a file.
+Example: cy.readFile('path/to/file.txt')
+This command reads the contents of the specified file and returns it as a string.
+
+cy.writeFile(filePath, contents): Writes to a file.
+Example: cy.writeFile('path/to/file.txt', 'Hello, World!')
+This command writes the specified contents to the file.

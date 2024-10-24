@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop Example</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      .draggable-item,
+      .drop-target {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #000;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+      .drop-target {
+        background-color: #e0e0e0;
+      }
+      .dragging {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="draggable" class="draggable-item" draggable="true">Drag me</div>
+      <div id="dropzone" class="drop-target">Drop here</div>
+    </div>
+
+    <script>
+      const draggable = document.getElementById("draggable");
+      const dropzone = document.getElementById("dropzone");
+
+      draggable.addEventListener("dragstart", (e) => {
+        e.dataTransfer.setData("text/plain", "dragged");
+        draggable.classList.add("dragging");
+      });
+
+      draggable.addEventListener("dragend", () => {
+        draggable.classList.remove("dragging");
+      });
+
+      dropzone.addEventListener("dragover", (e) => {
+        e.preventDefault(); // Necessary to allow dropping
+      });
+
+      dropzone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropzone.textContent = "Dropped!";
+      });
+    </script>
+  </body>
+</html>

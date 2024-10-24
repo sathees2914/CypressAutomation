@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dohtmlcument</title>
+</head>
+<body>
+    <h1>Upload a photo</h1>
+    <form id = "uploadForm" action="/upload the file using cypress/" method="post" enctype="multipart/form-data">
+        <label for="photo"> choose a photo : </label>
+        <input type = "file" id="photo" name="photo" accept="image/*"
+        required>
+        <button type="submit">Upload</button>
+        </form>
+        <div id="message"></div>
+        <script>
+            document.getElementById('uploaForm').addEventListener('submit',function (event) {
+                event.prevenDefault();
+                const messageDiv = document.getElementById('message');
+                const fileprint = document.getElementById('photo');
+
+                if(fileInput.files.length > 0){
+                    const fileName = fileInput.files[0].name;
+                    messageDiv.textContent='File "${FileName}" uploaded successfully';
+                }else{
+                    messageDiv.textContent = 'No file selected.';
+                }
+                
+            });
+        </script>
+
+
+<iframe src="https://www.youtube.com/?gl=IN" >youtube</iframe>
+
+
+</body>
+</html>

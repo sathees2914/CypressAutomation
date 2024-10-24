@@ -1,0 +1,116 @@
+describe("HTTP Request", () => {
+    it("get call", () => {
+        cy.request('GET', 'https://api.github.com/repos/SatheesKumar1334/Git_Postman/git')
+            .its('status')
+            .should('equal', 204);
+    });
+});
+    
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("Update Git Repository", () => {
+//     it("PATCH call", () => {
+//         cy.request({
+//             method: 'PATCH',
+//             url: 'https://api.github.com/repos/SatheesKumar1334/Git_Postman',
+//             headers: {
+//                 authorization: 'Bearer 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',
+//                 'content-type': 'application/json'
+//             },
+//             body: {
+//                 "name": "New_Name"
+//             }
+//         }).then((response) => {
+//              cy.log(JSON.stringify(response.body));
+            
+            
+//             expect(response.status).to.eq(404);
+//         });
+//     });
+// });
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// describe("Delete Resource", () => {
+//     it("DELETE call", () => {
+        
+//         cy.request({
+//             method: 'DELETE',
+//             url: 'https://api.github.com/repos/SatheesKumar1334/Git_Postman/git',
+//             headers: {
+//                 'Authorization': 'Bearer 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', 
+                
+//             },
+            
+//         }).then((response) => {
+            
+//             expect(response.status).to.eq(200); 
+            
+//         });
+//     });
+// });
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// describe("Update Resource", () => {
+//   it("PUT call", () => {
+      
+//       const newData = {
+              // name : "Git_Postman",
+              // description : "Api_post",
+              // private : false
+//       };
+
+      
+//       cy.request({
+//           method: 'PUT',
+//           url: 'https://api.github.com/repos/SatheesKumar1334/Git_Postman/git',
+//           headers: {
+//               'Authorization': 'Bearer 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', 
+//               'Content-Type': 'application/json' 
+              
+//           },
+//           body: newData 
+//       }).then((response) => {
+          
+//           expect(response.status).to.eq(200); 
+          
+//       });
+//   });
+// });
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// describe("Create Resource", () => {
+//   it("POST call", () => {
+      
+//       const postData = {
+//         name: "Git_Postman",
+//         description : "Api_post",
+//         private : false
+//       };
+
+     
+//       cy.request({
+//           method: 'POST',
+//           url: 'https://api.github.com/repos/SatheesKumar1334/Git_Postman/git',
+//           headers: {
+//               'Authorization': 'Bearer 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', 
+//               'Content-Type': 'application/json' 
+              
+//           },
+//           body: postData 
+//       }).then((response) => {
+          
+//           expect(response.status).to.eq(201); 
+          
+//       });
+//   });
+// });
